@@ -2,17 +2,73 @@
 <html lang="en">
 
 <head>
+    <style>
+        body {
+            background-image: url("pexels-pixabay-531756.jpg");
+        }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Question3</title>
+    <meta name="author" content="Farnam Forghani">
+    <meta name="description" content="Q3 HTML Homework">
+    <meta name="keywords" content="front-end, acm, soc, html">
+    <title>Survey</title>
 </head>
 
-<body>
-    <h2 class="test">LLLLLLL</h2>
-    <ul>
-        <li>Item 11</li>
-        <li>Item 22</li>
-    </ul>
+<body dir="rtl">
+    <h1>فرم نظرسنجی:</h1>
+    <label for="fname">نام: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <label for="lname">نام خانوادگی:</label><br>
+    <input type="text" id="lname" name="lname"><br>
+    <label for="email">ایمیل: &nbsp &nbsp &nbsp &nbsp &nbsp</label><br>
+    <input type="text" id="email" name="email"><br>
+    <label for="birthday">تاریخ تولد: &nbsp &nbsp</label><br>
+    <input type="date" id="birthday" name="birthday"><br>
+    <label for="phonenumber">شماره تماس: </label><br>
+    <input placeholder="0912-123-1234" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}" type="number" id="phonenumber"
+        name="phonenumber"><br>
+    <label for="site"> سایت : &nbsp &nbsp &nbsp &nbsp</label><br>
+    <input type="site" id="site" name="site"><br><br>
+
+    <h2>از میان غذاهای زیر کدام را ترجیح می دهید؟</h2>
+    <input type="radio">پیتزا&nbsp &nbsp &nbsp &nbsp
+    <input type="radio">کباب&nbsp &nbsp &nbsp &nbsp
+    <input type="radio">قرمه سبزی&nbsp &nbsp &nbsp &nbsp
+    <input type="radio">سوشی
+
+    <h2>کدام یک از غذاهای رستوران ما را میل کرده اید؟</h2>
+    <input type="checkbox">پیتزا&nbsp &nbsp &nbsp
+    <input type="checkbox">برگر&nbsp &nbsp &nbsp
+    <input type="checkbox">سوشی&nbsp &nbsp &nbsp
+    <input type="checkbox">مرغ سوخاری&nbsp &nbsp &nbsp
+    <input type="checkbox">سوپ&nbsp &nbsp &nbsp
+    <input type="checkbox">سالاد
+    
+    <h2>در کدام یک از شعبه های ما غذا خورده اید؟</h2>
+    <select name="branches" id="branches" form="branchform">
+        <option value="فردوس">فردوس</option>
+        <option value="ونک">ونک</option>
+        <option value="امیرآباد">امیرآباد</option>
+        <option value="تهرانپارس">تهرانپارس</option>
+    </select>
+
+    <h2>دوست دارید چه غذایی را به منوی رستوران اضافه کنیم ؟</h2>
+    <input type="text" id="foods" name="foods"><br>
+
+    <h2>پیشنهاد و انتقاد؟</h2>
+    <textarea id="suggestions" name="suggestions"></textarea>
+    <br>
+    <br>
+
+    <form action="https://theuselessweb.site/ducksarethebest.com/">
+        <input type="submit" value="Submit" />
+    </form>
+
+    
+    <footer dir="ltr">
+        <small>&copy Farnam Forghani 2024</small>
+    </footer>
 </body>
 
 </html>
