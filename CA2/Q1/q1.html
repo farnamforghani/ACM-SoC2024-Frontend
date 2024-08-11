@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Farnam Forghani">
+    <meta name="description" content="CSS Homework Q1">
+    <meta name="keywords" content="front-end, acm, soc, css">
+    <title>Q1 - Linear Gradient</title>
+    <!-- <link rel="stylesheet" href="q1.css"> -->
+    <style>
+        html {
+            color: white;
+        }
+
+        body {
+            background: linear-gradient(to bottom right, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 500% 500%;
+            animation: bg-gradient 6s ease 0s infinite alternate;
+        }
+
+        main {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        @keyframes bg-gradient {
+            from {
+                background-position: 0% 50%;
+            }
+
+            to {
+                background-position: 100% 50%;
+            }
+        }
+
+        /* .btn-section {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin: 0px;
+            padding: 0px;
+        } */
+
+        h1 {
+            text-transform: uppercase;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 100;
+        }
+
+        button {
+            text-transform: uppercase;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 100;
+            background-color: rgb(0, 0, 0, 0);
+            border: 1px solid white;
+            border-radius: 2ch 2ch;
+            height: 40px;
+            width: 150px;
+            color: white;
+            transition: all 0.2s;
+        }
+
+        button:hover {
+            cursor: pointer;
+            background-color: white;
+            color: black;
+        }
+
+        h2 {
+            text-transform: uppercase;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 100;
+        }
+
+        h2::after {
+            content: "----";
+        }
+
+        h2::before {
+            content: "----";
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>
+            This is actually not that hard!
+        </h1>
+        <section id="btn-section">
+            <button>Source Code</button>
+            <button>Full screen</button>
+        </section>
+        <h2 class="line-around">
+            Linear gradient background animation
+        </h2>
+    </main>
+</body>
+
+</html>
