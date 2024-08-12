@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Farnam Forghani">
+    <meta name="description" content="CSS Homework Q2">
+    <meta name="keywords" content="front-end, acm, soc, css">
+    <title>Q2 - Pinterest</title>
+    <style>
+        #main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-basis: 18%;
+            margin-top: 80px;
+        }
+
+        .image {
+            margin: 10px;
+            padding: 4px;
+            border-radius: 5ch;
+            flex: 0 1 calc(20% - 20px);
+            width: 260px;
+            height: 430px;
+        }
+
+        .card:hover {
+            filter: brightness(70%);
+            /* transition: all 0.2s; */
+        }
+
+        .card:hover button {
+            display: block;
+            /* filter: brightness(70%); */
+        }
+
+        .top-button {
+            display: none;
+            position: absolute;
+            cursor: pointer;
+            border-radius: 5ch;
+            border: 0px solid white;
+            background-color: red;
+            color: white;
+            font-size: 15px;
+            width: 70px;
+            height: 40px;
+            left: 180px;
+            top: 40px;
+        }
+
+        .top-button:hover {
+            filter: brightness(70%);
+            cursor: pointer;
+            transition: all 0.2s;
+            display: block;
+        }
+
+        .down-button {
+            display: none;
+            position: absolute;
+            cursor: pointer;
+            border-radius: 3ch;
+            border: 0px solid white;
+            background-color: white;
+            color: black;
+            font-size: 15px;
+            width: 40px;
+            height: 40px;
+            left: 170px;
+            top: 380px;
+        }
+
+        .down-button:hover {
+            filter: brightness(70%);
+            cursor: pointer;
+            transition: all 0.2s;
+            display: block;
+        }
+
+        .down-button2 {
+            display: none;
+            position: absolute;
+            cursor: pointer;
+            border-radius: 5ch;
+            border: 0px solid white;
+            background-color: white;
+            color: black;
+            font-size: 15px;
+            width: 40px;
+            height: 40px;
+            left: 215px;
+            top: 380px;
+        }
+
+        .down-button2:hover {
+            filter: brightness(70%);
+            cursor: pointer;
+            transition: all 0.2s;
+            display: block;
+        }
+
+        .headerp {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            /* flex-basis: 100%; */
+            background-color: white;
+            width: 99%;
+            height: 80px;
+            position: fixed;
+            top: 0px;
+        }
+
+        #Pinterest {
+            margin-left: 10px;
+        }
+
+        #Pinterest:hover {
+            filter: brightness(90%);
+            cursor: pointer;
+        }
+
+        #Pinterest-logo {
+            background-color: white;
+            font-weight: 600;
+            border: 0px solid white;
+            color: rgb(185, 11, 11);
+            border-radius: 2ch;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #Home {
+            background-color: black;
+            font-weight: 600;
+            margin-left: 10px;
+            border: 4px solid white;
+            color: white;
+            border-radius: 4ch;
+            font-size: 16px;
+            cursor: pointer;
+            height: 53px;
+            width: 70px;
+        }
+
+        #Home:hover {
+            filter: brightness(90%);
+        }
+        
+        #Explore {
+            background-color: white;
+            font-weight: 600;
+            margin-left: 0px;
+            border: 4px solid white;
+            color: black;
+            border-radius: 4ch;
+            font-size: 16px;
+            cursor: pointer;
+            height: 53px;
+            width: 80px;
+        }
+
+        #Explore:hover {
+            filter: brightness(90%);
+        }
+
+        #Create {
+            background-color: white;
+            font-weight: 600;
+            margin-left: 0px;
+            border: 4px solid white;
+            color: black;
+            border-radius: 4ch;
+            font-size: 16px;
+            cursor: pointer;
+            height: 53px;
+            width: 68px;
+        }
+
+        #Create:hover {
+            filter: brightness(90%);
+        }
+        
+        #Search {
+            background-color: rgb(213, 212, 212);
+            height: 50px;
+            border-radius: 4ch;
+            margin-left: 20px;
+            width: 62%;
+        }
+
+        #Search-logo {
+            margin-left: 13px;
+            margin-top: 15px;
+        }
+
+        #Search-input {
+            width: 94%;
+            margin-top: 7px;
+            border: 0;
+            background-color: transparent;
+            height: 35px;
+        }
+
+        #notification {
+            margin-left: 20px;
+            padding: 0px;
+            border: 10px solid white;
+            border-radius: 2ch;
+        }
+        
+        #notification:hover {
+            filter: brightness(90%);
+            cursor: pointer;
+        }
+
+        #message {
+            border: 10px solid white;
+            border-radius: 2ch;
+            padding: 0px;
+            margin-left: 20px;
+        }
+
+        #message:hover {
+            filter: brightness(90%);
+            cursor: pointer;
+        }
+
+        #account {
+            margin-left: 15px;
+            background-color: white;
+            font-weight: 600;
+            border: 4px solid white;
+            color: black;
+            border-radius: 4ch;
+            font-size: 16px;
+            cursor: pointer;
+            height: 30px;
+            width: 30px;
+        }
+
+        #account:hover {
+            filter: brightness(90%);
+            cursor: pointer;
+        }
+
+        #down {
+            margin-left: 18px;
+            margin-right: 5px;
+            border: 10px solid white;
+            border-radius: 4ch;
+            padding: 0px;
+            
+        }
+
+        #down:hover {
+            filter: brightness(90%);
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="headerp">
+            <img id="Pinterest" src="./images/Pinterest-logo.png" width="40px" height="40px">
+            <button id="Pinterest-logo">Pinterest</button>
+            <button id="Home">Home</button>
+            <button id="Explore">Explore</button>
+            <button id="Create">Create</button>
+            <div id="Search">
+                <img id="Search-logo" src="./images/search-icon.png" width="15px" height="15px">
+                <input id="Search-input" type="text" placeholder="Search...">
+            </div>
+            <img id="notification" src="./images/notification-icon.png" width="30px" height="30px" alt="notification">
+            <img id="message" src="./images/message-icon.png" width="30px" height="30px">
+            <button id="account">F</button>
+            <img id="down" src="./images/down-icon.png" width="20px" height="20px">
+        </div>
+    </header>
+    <div id="main">
+        <div class="card">
+            <img class="image" src="./images/1936631a4549d3286bd1ed098c4ddbc4.jpg">
+            <button class="top-button">
+                Save
+            </button>
+            <button class="down-button">
+                B1
+            </button>
+            <button class="down-button2">
+                B2
+            </button>
+        </div>
+
+        <div class="card">
+            <img class="image" src="./images/e4a087f64b5faa651e98f319f9d2c2ba.jpg">
+            <button class="top-button">
+                Save
+            </button>
+            <button class="down-button">
+                B1
+            </button>
+            <button class="down-button2">
+                B2
+            </button>
+        </div>
+        <div class="card">
+            <img class="image" src="./images/3eacffd6448b802c5098088d1980449c.jpg">
+            <button class="top-button">
+                Save
+            </button>
+            <button class="down-button">
+                B1
+            </button>
+            <button class="down-button2">
+                B2
+            </button>
+        </div>
+        <div class="card">
+            <img class="image" src="./images/70e026741aad14edde0b95e10e2b2bd6.jpg">
+            <button class="top-button">
+                Save
+            </button>
+            <button class="down-button">
+                B1
+            </button>
+            <button class="down-button2">
+                B2
+            </button>
+        </div>
+        <div class="card">
+            <img class="image" src="./images/80247036d356d2883ddfe55c94152d56.jpg">
+            <button class="top-button">
+                Save
+            </button>
+            <button class="down-button">
+                B1
+            </button>
+            <button class="down-button2">
+                B2
+            </button>
+        </div>
+        <div class="card">
+            <img class="image" src="./images/827536f980794a5480a715d665d4acce.jpg">
+            <button class="top-button">
+                Save
+            </button>
+            <button class="down-button">
+                B1
+            </button>
+            <button class="down-button2">
+                B2
+            </button>
+        </div>
+        <div class="card">
+            <img class="image" src="./images/976b2fc38eacb6127777540c2dab81ab.jpg">
+            <button class="top-button">
+                Save
+            </button>
+            <button class="down-button">
+                B1
+            </button>
+            <button class="down-button2">
+                B2
+            </button>
+        </div>
+        <div class="card">
+            <img class="image" src="./images/fe22601c76dbf78d87835963754dace2.jpg">
+            <button class="top-button">
+                Save
+            </button>
+            <button class="down-button">
+                B1
+            </button>
+            <button class="down-button2">
+                B2
+            </button>
+        </div>
+        <div class="card">
+            <img class="image" src="./images/efa7fe18e90cda321ea7d7c70ca2a8be.jpg">
+            <button class="top-button">
+                Save
+            </button>
+            <button class="down-button">
+                B1
+            </button>
+            <button class="down-button2">
+                B2
+            </button>
+        </div>
+        <div class="card">
+            <img class="image" src="./images/e9b4946d7579afc80bb3530e219762f9.jpg">
+            <button class="top-button">
+                Save
+            </button>
+            <button class="down-button">
+                B1
+            </button>
+            <button class="down-button2">
+                B2
+            </button>
+        </div>
+        <div class="card">
+            <img class="image" src="./images/9a25d6bc84cca349b16280036106ffe6.jpg">
+            <button class="top-button">
+                Save
+            </button>
+            <button class="down-button">
+                B1
+            </button>
+            <button class="down-button2">
+                B2
+            </button>
+        </div>
+        <div class="card">
+            <img class="image" src="./images/be8703ba8e7803243dd2f4a139b5857e.jpg">
+            <button class="top-button">
+                Save
+            </button>
+            <button class="down-button">
+                B1
+            </button>
+            <button class="down-button2">
+                B2
+            </button>
+        </div>
+        <div class="card">
+            <img class="image" src="./images/cd6234c74f81ab66c1dc47f8a58e7b70.jpg">
+            <button class="top-button">
+                Save
+            </button>
+            <button class="down-button">
+                B1
+            </button>
+            <button class="down-button2">
+                B2
+            </button>
+        </div>
+        <div class="card">
+            <img class="image" src="./images/d437f4897fde18d8006f89319ba1c066.jpg">
+            <button class="top-button">
+                Save
+            </button>
+            <button class="down-button">
+                B1
+            </button>
+            <button class="down-button2">
+                B2
+            </button>
+        </div>
+        <div class="card">
+            <img class="image" src="./images/d7e8ef163e1c6fcfd11d00d341bf99c2.jpg">
+            <button class="top-button">
+                Save
+            </button>
+            <button class="down-button">
+                B1
+            </button>
+            <button class="down-button2">
+                B2
+            </button>
+        </div>
+        <div class="card">
+            <img class="image" src="./images/dfc26458e7c6126c5413dfa8a94e856f.jpg">
+            <button class="top-button">
+                Save
+            </button>
+            <button class="down-button">
+                B1
+            </button>
+            <button class="down-button2">
+                B2
+            </button>
+        </div>
+    </div>
+
+</body>
+
+</html>
