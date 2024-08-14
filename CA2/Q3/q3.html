@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Farnam Forghani">
+    <meta name="description" content="CSS Homework Q3">
+    <meta name="keywords" content="front-end, acm, soc, css">
+    <title>Q3 - Portfolio</title>
+    <style>
+        #page1 {
+            background-image: url(./modern-1920-x-1200-background-zj5dwc10d6yrsu45.jpg);
+            background-position: right bottom, left top;
+            background-repeat: no-repeat, repeat;
+            height: 600px;
+            background-size: 100%;
+
+            background-attachment: fixed;
+            margin: 0px;
+            border: 0px;
+            padding: 0px;
+            width: 100%;
+            height: 90vh;
+        }
+
+        header {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: transparent;
+            width: 99%;
+            height: 50px;
+            top: 0px;
+        }
+
+        #Portfolio {
+            background-color: transparent;
+            color: rgb(226, 43, 67);
+            font-size: 25px;
+            margin-left: 20px;
+            margin-top: 15px;
+            border: 2px solid transparent;
+            font-weight: 600;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        #Portfolio span {
+            color: white;
+        }
+
+        #Portfolio:hover {
+            filter: brightness(70%);
+            cursor: pointer;
+            /* transition: all 0.2s; */
+        }
+
+        #header {
+            margin-top: 0px;
+            display: flex;
+            width: 100%;
+        }
+
+        #Home {
+            background-color: transparent;
+            color: rgb(226, 43, 67);
+            font-size: 18px;
+            margin-left: 350px;
+            margin-top: 15px;
+            border: 2px solid transparent;
+            font-weight: 400;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        #Home:hover {
+            filter: brightness(70%);
+            cursor: pointer;
+            /* transition: all 0.2s; */
+        }
+
+        #About {
+            background-color: transparent;
+            color: white;
+            font-size: 18px;
+            margin-left: 25px;
+            margin-top: 15px;
+            border: 2px solid transparent;
+            font-weight: 400;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        #About:hover {
+            filter: brightness(70%);
+            cursor: pointer;
+            /* transition: all 0.2s; */
+        }
+
+        #Services {
+            background-color: transparent;
+            color: white;
+            font-size: 18px;
+            justify-content: center;
+            margin-left: 20px;
+            margin-top: 15px;
+            border: 2px solid transparent;
+            font-weight: 400;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        #Services:hover {
+            filter: brightness(70%);
+            cursor: pointer;
+            /* transition: all 0.2s; */
+        }
+
+        #Skills {
+            background-color: transparent;
+            color: white;
+            font-size: 18px;
+            margin-left: 15px;
+            margin-top: 15px;
+            border: 2px solid transparent;
+            font-weight: 400;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        #Skills:hover {
+            filter: brightness(70%);
+            cursor: pointer;
+            /* transition: all 0.2s; */
+        }
+
+        #Contact {
+            background-color: transparent;
+            color: white;
+            font-size: 18px;
+            margin-left: 20px;
+            margin-top: 15px;
+            border: 2px solid transparent;
+            font-weight: 400;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        #Contact:hover {
+            filter: brightness(70%);
+            cursor: pointer;
+            /* transition: all 0.2s; */
+        }
+
+        #Subscribe {
+
+            background-color: rgb(226, 43, 67);
+            color: white;
+            font-size: 18px;
+            margin-left: 350px;
+            margin-top: 15px;
+            border: 2px solid transparent;
+            border-radius: 3ch;
+            width: 130px;
+            font-weight: 400;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        #Subscribe:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        #yo {
+            color: white;
+            margin-left: 80px;
+            margin-top: 140px;
+            font-size: 25px;
+            font-family: sans-serif;
+        }
+
+        #name {
+            color: rgb(226, 43, 67);
+            margin-left: 80px;
+            margin-top: 0px;
+            font-size: 65px;
+            font-family: sans-serif;
+        }
+
+        #name span {
+            color: white;
+        }
+
+        #info {
+            color: white;
+            margin-left: 80px;
+            margin-top: 0px;
+            font-size: 25px;
+            font-family: sans-serif;
+        }
+
+        #contact {
+            margin-left: 80px;
+            margin-top: 50px;
+            background-color: white;
+            width: 390px;
+            height: 40px;
+            border-radius: 3ch;
+        }
+
+        #contact input {
+            border: 2px solid transparent;
+            margin-top: 8px;
+            margin-left: 10px;
+            height: 20px;
+            width: 237px;
+        }
+
+        #contact button {
+            background-color: rgb(226, 43, 67);
+            color: white;
+            font-size: 18px;
+            /* margin-left: 350px; */
+            margin-top: 1px;
+            border: 2px solid transparent;
+            border-radius: 3ch;
+            width: 130px;
+            height: 37px;
+            /* font-weight: 400; */
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        #contact button:hover {
+            transform: scale(1.03);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        #page2 {
+            background-color: rgb(177, 48, 119);
+            height: 600px;
+        }
+
+        .page2 {
+            padding-top: 100px;
+            padding-left: 200px;
+            display: flex;
+        }
+
+        #page2div {
+            display: flex;
+            flex-direction: column;
+            margin-left: 50px;
+            margin-right: 150px;
+        }
+
+        #page2div h1 {
+            font-size: 40px;
+            font-weight: bold;
+            color: rgb(72, 4, 61);
+            font-family: sans-serif;
+        }
+
+        #page2div h2 {
+            font-size: 25px;
+            font-weight: 400;
+            color: rgb(72, 4, 61);
+            font-family: sans-serif;
+        }
+
+        #page2div p {
+            font-size: 18px;
+            font-weight: 400;
+            color: rgb(72, 4, 61);
+            font-family: sans-serif;
+        }
+
+        #page2div button {
+            font-size: 25px;
+            font-weight: 400;
+            color: rgb(72, 4, 61);
+            font-family: sans-serif;
+        }
+
+        #page2div button {
+            background-color: rgb(226, 43, 67);
+            color: white;
+            font-size: 18px;
+            /* margin-left: 350px; */
+            margin-top: 10px;
+            border: 0px solid transparent;
+            border-radius: 3ch;
+            width: 130px;
+            height: 37px;
+            /* font-weight: 400; */
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        #page2div button:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        #page3 {
+            background-color: rgb(72, 4, 61);
+            height: 500px;
+        }
+
+        .page3 {
+            padding-top: 50px;
+            padding-left: 20px;
+            display: flex;
+            /* justify-content: center; */
+            flex-direction: column;
+        }
+
+        #page3div {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .page3div {
+            background-color: rgb(177, 48, 119);
+            margin-top: 40px;
+            margin-right: 20px;
+            height: 240px;
+            width: 400px;
+            border-radius: 4ch;
+        }
+
+        #page3 h1 {
+            font-size: 40px;
+            font-weight: 600;
+            color: rgb(177, 48, 119);
+            font-family: sans-serif;
+        }
+
+        #page3div h1 {
+            font-size: 25px;
+            font-weight: 400;
+            color: rgb(72, 4, 61);
+            font-family: sans-serif;
+        }
+
+        .page3div p {
+            font-family: sans-serif;
+            color: rgb(72, 4, 61);
+        }
+
+        .page3div button {
+            background-color: rgb(226, 43, 67);
+            color: white;
+            font-size: 18px;
+            /* margin-left: 350px; */
+            margin-top: 10px;
+            border: 0px solid transparent;
+            border-radius: 3ch;
+            width: 130px;
+            height: 37px;
+            /* font-weight: 400; */
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        #page3div button:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        #page4 {
+            height: 250px;
+            background-color: rgb(177, 48, 119);
+        }
+
+        .page4 {
+            padding-top: 50px;
+            padding-left: 20px;
+            display: flex;
+            /* justify-content: center; */
+            flex-direction: column;
+        }
+
+        .page4 h2 {
+            font-size: 30px;
+            text-transform: capitalize;
+            color: rgb(72, 4, 61);
+            font-family: sans-serif;
+        }
+
+        .page4 button {
+            background-color: rgb(226, 43, 67);
+            color: white;
+            font-size: 18px;
+            /* margin-left: 350px; */
+            margin-top: 10px;
+            border: 0px solid transparent;
+            border-radius: 3ch;
+            width: 130px;
+            height: 37px;
+            /* font-weight: 400; */
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        #page4 button:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        #page5 {
+            background-color: rgb(72, 4, 61);
+            display: flex;
+            height: 250px;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        #page5 h1 {
+            font-size: 30px;
+            margin-top: 40px;
+            font-weight: 600;
+            color: rgb(177, 48, 119);
+            font-family: sans-serif;
+        }        
+
+        #page5 h2 {
+            font-size: 25px;
+            margin-top: 30px;
+            font-weight: 400;
+            color: rgb(177, 48, 119);
+            font-family: sans-serif;
+        }   
+
+        #page5 img {
+            margin-top: 10px;
+            margin-left: 5px;
+            background-color: rgb(177, 48, 119);
+            border-radius: 4ch;
+            border: 0px solid transparent;
+        }
+
+        #page5 img:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+    </style>
+</head>
+
+<body>
+    <main>
+        <section id="page1">
+            <div id="header">
+                <button id="Portfolio">Portfo<span>lio</span></button>
+                <button id="Home">Home</button>
+                <button id="About">About Us</button>
+                <button id="Services">Services</button>
+                <button id="Skills">Skills</button>
+                <button id="Contact">Contact Us</button>
+                <button id="Subscribe">Subscribe</button>
+            </div>
+            <p id="yo">Yo Yo, I'm</p>
+            <p id="name">Farnam <span>Forghani</span></p>
+            <p id="info">I'm studying and trying to learn</p>
+            <div id="contact">
+                <input type="text" placeholder="Enter your email...">
+                <button>Lets Start!</button>
+            </div>
+        </section>
+        <section id="page2">
+            <div class="page2">
+                <img src="./telegram profile.jpeg" width="400px">
+                <div id="page2div">
+                    <h1>About Me</h1>
+                    <h2>Student</h2>
+                    <p>I'm studying computer engineering at Sharif University. Recently, i have finished my fourth
+                        semester
+                        and this year (1403) is
+                        gonna be my third year. Beside university, i want to learn new skills at programming and
+                        different
+                        branches in IT, like front-end, database, etc .
+                        Right now I'm trying to find a job to learn new things from it and mostly have a new experience.
+                    </p>
+                    <button>Let's Talk</button>
+                </div>
+            </div>
+        </section>
+        <section id="page3">
+            <div class="page3">
+                <center>
+                    <h1>Our Services</h1>
+                    <div id="page3div">
+                        <div class="page3div">
+                            <h1>Java</h1>
+                            <p>I can develop your java code in subjects like object-oriented programming, thread,
+                                network, ...</p>
+                            <button>Read More</button>
+                        </div>
+                        <div class="page3div">
+                            <h1>Python</h1>
+                            <p>Like Java, I can develop your python code in those subjects too. Also i can work with
+                                libraries like Numpy, pandas, matplotlib, etc.</p>
+                            <button>Read More</button>
+                        </div>
+                        <div class="page3div">
+                            <h1>C</h1>
+                            <p>I can develop your c programs. With C language, you can write programs with faster
+                                execution time.</p>
+                            <button>Read More</button>
+                        </div>
+                    </div>
+                </center>
+            </div>
+        </section>
+        <section id="page4">
+            <div class="page4">
+                <center>
+                    <h2>let me help you with your code</h2>
+                    <button>Hire me</button>
+                </center>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div id="page5">
+            <center>
+                <h1>Farnam Forghani</h1>
+                <h2>For contacting me, you can have these links:</h2>
+                <div class="page5">
+                    <img src="./telegram-icon.png" width="30px">
+                    <img src="./github-circle-icon.png" width="30px">
+                    <img src="./linkedin-icon.png" width="30px">
+                </div>
+            </center>
+        </div>
+    </footer>
+</body>
+
+</html>
