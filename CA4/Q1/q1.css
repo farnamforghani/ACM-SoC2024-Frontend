@@ -1,0 +1,38 @@
+body {
+    background-color: rgb(14, 10, 15, 0.8);
+}
+
+h1 {
+    color: white;
+    font-family: sans-serif;
+    margin-top: 100px;
+    margin-left: 30px;
+}
+
+input {
+    margin-top: 20px;
+    margin-left: 30px;
+    width: 250px;
+    height: 25px;
+    text-align: center;
+}
+
+div {
+    direction: rtl;
+    position: fixed;
+    top: 90px;
+    left: 350px;
+    border: 2px solid white;
+    height: 115px;
+    width: 120px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: black;
+    font-family: sans-serif;
+}
+
+#backtext {
+    color: red;
+    display: none;
+}
