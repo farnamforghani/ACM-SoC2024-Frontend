@@ -1,0 +1,99 @@
+body {
+    background-image: url(./let_it_burn-wallpaper-1920x1080.jpg);
+    background-position:left top;
+    background-size: 100%;
+}
+
+#inputs {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 100px;
+}
+
+#back {
+    background-color: black;
+    width: 500px;
+    height: 500px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#rates {
+    background-color: white;
+    width: 500px;
+    height: 500px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 50px;
+}
+
+#name {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 25px;
+    width: 190px;
+    text-align: center;
+}
+
+#label {
+    margin-top: 15px;
+    margin-bottom: 0px;
+    color: white;
+    font-family: sans-serif;
+}
+
+#math {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#physics {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#chemistry {
+    margin-top: 15px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+#calculate {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#back button {
+    border: transparent;
+    background-color: white;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 2ch;
+    font-size: medium;
+    font-weight: 600;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+#back button:hover {
+    transition: all 0.2s;
+    filter: brightness(80%);
+}
+
+#reset {
+    margin-bottom: 10px;
+}
+
+#rates p {
+    font-weight: 600;
+    font-size: 22px;
+    font-family: sans-serif;
+}

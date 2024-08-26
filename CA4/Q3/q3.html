@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Farnam Forghani">
+    <meta name="description" content="Q3 JavaScript Homework">
+    <meta name="keywords" content="front-end, acm, soc, JavaScript">
+    <title>Student's Rank</title>
+    <link rel="stylesheet" href="q3.css">
+    <script src="q3.js" defer></script>
+</head>
+
+<body>
+    <section id="inputs">
+        <!-- Message: I don't use form for inputs because I had to change a lot of html and buttons and have another function in Js for it and 
+         it doesn't have any specific point in my mind. Instead, I use alerts for error messages. -->
+        <div id="back">
+            <p id="label">Write the name of the student:</p>
+            <input type="text" id="name" name="name">
+            <p id="label">Enter math's grade:(*3)</p>
+            <input type="number" id="math" name="mathscore">
+            <p id="label">Enter physics's grade:(*2)</p>
+            <input type="number" id="physics" name="physicsscore">
+            <p id="label">Enter chemistry's grade:(*1)</p>
+            <input type="number" id="chemistry" name="chemistryscore">
+            <button id="add">Add!</button>
+            <button id="calculate">Give me ranks!</button>
+            <button id="reset">Reset!</button>
+        </div>
+        <div id="rates">
+            <p>Here are the ranks:</p>
+        </div>
+    </section>
+</body>
+
+</html>
